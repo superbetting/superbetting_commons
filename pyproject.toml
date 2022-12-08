@@ -1,5 +1,5 @@
 [project]
-name = "superbetting-commons"
+name = "superbetting_commons"
 version = "0.0.1"
 authors = [
   { name="Giovanni M Martelli, Benzoni Thomas", email="giovanni.martlli1@gmail.com" },
