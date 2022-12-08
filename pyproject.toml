@@ -2,7 +2,7 @@
 name = "superbetting-commons"
 version = "0.0.1"
 authors = [
-  { name="Giovanni M Martelli, Benzoni Thomas", email="" },
+  { name="Giovanni M Martelli, Benzoni Thomas", email="giovanni.martlli1@gmail.com" },
 ]
 description = "Superbetting Commons"
 readme = "README.md"
