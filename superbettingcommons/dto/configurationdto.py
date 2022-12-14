@@ -12,6 +12,12 @@ class ConfigurationDto:
         self.bet_exchange = ""
         self.min_attacchi=0
         self.max_attacchi=0
+        self.verde_rosso_diff = 0
+        self.stake = 0
+        self.start_verde = 0
+        self.start_rosso = 0
+        self.pendenza = 1.1
+
 
     def load_from_json(self, js: dict):
         self.name = js['name']
@@ -25,6 +31,11 @@ class ConfigurationDto:
         self.bet_exchange = js['bet_exchange'] if "bet_exchange" in js else ""
         self.min_attacchi = js['min_attacchi'] if "min_attacchi" in js else 0
         self.max_attacchi = js['max_attacchi'] if "max_attacchi" in js else 0
+        self.verde_rosso_diff = float(js['verde_rosso_diff']) if "verde_rosso_diff" in js else 0
+        self.stake = float(js['stake']) if "stake" in js else 0
+        self.start_verde = float(js['start_verde']) if "start_verde" in js else 0
+        self.start_rosso = float(js['start_rosso']) if "start_rosso" in js else 0
+        self.pendenza = float(js['pendenza']) if "pendenza" in js else 1.1
 
 
 def get_configuration_from_json(js: dict):

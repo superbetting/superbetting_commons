@@ -22,6 +22,8 @@ class MatchDto:
         self.attacchi: int = 0
         self.quota: int = 0
         self.multiplier: int = -1
+        self.booster = 1
+        self.freezer = 1
 
     def to_mongo_object(self) -> dict:
         return {
@@ -42,7 +44,9 @@ class MatchDto:
             "scanned_date": self.scanned_date,
             "quota": self.quota,
             "attacchi": self.attacchi,
-            "multiplier": self.multiplier
+            "multiplier": self.multiplier,
+            "booster": self.booster,
+            "freezer": self.freezer
         }
 
     def load_from_json(self, js: dict):
@@ -63,6 +67,8 @@ class MatchDto:
         self.quota = js['quota'] if 'quota' in js else 0
         self.attacchi = js['attacchi'] if 'attacchi' in js else 0
         self.multiplier = js['multiplier'] if 'multiplier' in js else -1
+        self.booster = js['booster'] if 'booster' in js else 1
+        self.freezer = js['freezer'] if 'freezer' in js else 1
 
 def get_match_from_json(js: dict):
     match = MatchDto()
