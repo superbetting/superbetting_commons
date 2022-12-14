@@ -17,6 +17,10 @@ class ConfigurationDto:
         self.start_verde = 0
         self.start_rosso = 0
         self.pendenza = 1.1
+        self.soglia_booster = 1
+        self.soglia_freezer = 1
+        self.booster_multiplier = 1
+        self.freezer_multiplier = 1
 
 
     def load_from_json(self, js: dict):
@@ -36,7 +40,10 @@ class ConfigurationDto:
         self.start_verde = float(js['start_verde']) if "start_verde" in js else 0
         self.start_rosso = float(js['start_rosso']) if "start_rosso" in js else 0
         self.pendenza = float(js['pendenza']) if "pendenza" in js else 1.1
-
+        self.soglia_booster = float(js['soglia_booster']) if "soglia_booster" in js else 1
+        self.soglia_freezer = float(js['soglia_freezer']) if "soglia_freezer" in js else 1
+        self.booster_multiplier = float(js['booster_multiplier']) if "booster_multiplier" in js else 1
+        self.freezer_multiplier = float(js['freezer_multiplier']) if "freezer_multiplier" in js else 1
 
 def get_configuration_from_json(js: dict):
     configuration = ConfigurationDto()
