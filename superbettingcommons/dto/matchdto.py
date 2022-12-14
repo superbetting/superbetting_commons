@@ -21,6 +21,7 @@ class MatchDto:
         self.last_results: list = []
         self.attacchi: int = 0
         self.quota: int = 0
+        self.multiplier: int = -1
 
     def to_mongo_object(self) -> dict:
         return {
@@ -40,7 +41,8 @@ class MatchDto:
             "modified_date": self.modified_date,
             "scanned_date": self.scanned_date,
             "quota": self.quota,
-            "attacchi": self.attacchi
+            "attacchi": self.attacchi,
+            "multiplier": self.multiplier
         }
 
     def load_from_json(self, js: dict):
@@ -60,7 +62,7 @@ class MatchDto:
         self.scanned_date = js['scanned_date'] if 'scanned_date' in js else None
         self.quota = js['quota'] if 'quota' in js else 0
         self.attacchi = js['attacchi'] if 'attacchi' in js else 0
-
+        self.multiplier = js['multiplier'] if 'multiplier' in js else -1
 
 def get_match_from_json(js: dict):
     match = MatchDto()
