@@ -2,7 +2,7 @@ import json
 from datetime import datetime
 from types import SimpleNamespace
 
-from superbettingcommons.dtos.BaseDto import BaseDto
+from superbettingcommons.dtos.basedto import BaseDto
 from superbettingcommons.utilities.json_utils import dump_function
 
 

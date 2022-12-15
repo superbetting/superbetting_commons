@@ -1,4 +1,4 @@
-from superbettingcommons.dtos.BaseDto import BaseDto
+from superbettingcommons.dtos.basedto import BaseDto
 
 
 class _MatchParam:
@@ -36,6 +36,7 @@ class ConfigurationDto(BaseDto):
 
     def __init__(self):
         self.name = ""
+        self.type = ""
         self.publish_param = _PublishParam()
         self.match_param = _MatchParam()
         self.bet_param = _BetParam()
