@@ -11,3 +11,7 @@ class BaseDto:
     @staticmethod
     def load_from_json(js: str):
         return json.loads(js, object_hook=lambda d: SimpleNamespace(**d))
+
+    @staticmethod
+    def load_from_dict(js: dict):
+        return json.loads(json.dumps(js), object_hook=lambda d: SimpleNamespace(**d))
