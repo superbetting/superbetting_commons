@@ -81,7 +81,7 @@ class Logger:
 
     def _get_current_log_(self, level, message):
         return "[{}]|{}|{} --> {}".format(
-            (datetime.datetime.now()).date(),
+            datetime.datetime.now(),
             level,
             self.owner_name,
             message
