@@ -29,7 +29,8 @@ class _BetParam:
 class _PublishParam:
     def __init__(self):
         self.collection_name = ""
-        self.bet_exchange = ""
+        self.routing_key = ""
+        self.chat_id = ""
 
 
 class ConfigurationDto(BaseDto):
