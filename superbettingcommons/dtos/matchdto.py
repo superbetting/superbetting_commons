@@ -17,6 +17,7 @@ class _MatchData:
         self.minutes = -1
         self.goal_interceptor = 0
         self.attacchi = 0
+        self.seconds = 0
 
 
 class _BetType:
