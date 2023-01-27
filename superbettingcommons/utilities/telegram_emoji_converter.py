@@ -23,7 +23,9 @@ Index_Emoji_Converter_Dictionary = {
     19: '🔥',
     20: '🦾',
     21: '📌',
-    22: '🔵'
+    22: '🔵',
+    23: '😎',
+    24: '🙏'
 
 }
 
@@ -51,6 +53,8 @@ class Emoji(enum.Enum):
     ARM = 20,
     PUSH_PIN = 21,
     BLUE_CIRCLE = 22,
+    GLASSES_FACE = 23,
+    DOUBLE_HANDS = 24,
     NONE = -1
 
     def __str__(self):
