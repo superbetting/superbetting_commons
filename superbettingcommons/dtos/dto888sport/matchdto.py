@@ -1,37 +1,36 @@
-import superbettingcommons.dtos.basedto
+from superbettingcommons.dtos.basedto import BaseDto
 
-
-class ScrapedMatchDto(dtos.basedto.BaseDto):
+class ScrapedMatchDto(BaseDto):
     def __init__(self):
         self.match_data = MatchData()
-        self.snapshots: list(Snapshot) = []
+        self.snapshots: list[Snapshot] = []
 
 
-class MatchData(dtos.basedto.BaseDto):
+class MatchData(BaseDto):
     def __init__(self) -> None:
         self.match_name = ""
         self.home_team = ""
         self.away_team = ""
 
 
-class Snapshot(dtos.basedto.BaseDto):
+class Snapshot(BaseDto):
     def __init__(self) -> None:
         self.statistics = Statistics()
-        self.bet_list: list(BetData) = []
+        self.bet_list: list[BetData] = []
 
 
-class BetData(dtos.basedto.BaseDto):
+class BetData(BaseDto):
     def __init__(self) -> None:
         self.bet_type = BetType()
 
 
-class BetType(dtos.basedto.BaseDto):
+class BetType(BaseDto):
     def __init__(self):
         self.over_type = -1
         self.quota: int = 0
 
 
-class Statistics(dtos.basedto.BaseDto):
+class Statistics(BaseDto):
     def __init__(self):
         self.minutes = 0
         self.score_home = 0
