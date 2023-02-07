@@ -9,6 +9,7 @@ class ScrapedMatchDto(BaseDto):
 class MatchData(BaseDto):
     def __init__(self) -> None:
         self.match_name = ""
+        self.match_id = ""
         self.home_team = ""
         self.away_team = ""
 
