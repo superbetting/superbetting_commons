@@ -1,5 +1,6 @@
 from superbettingcommons.dtos.basedto import BaseDto
 
+
 class ScrapedMatchDto(BaseDto):
     def __init__(self):
         self.match_data = MatchData()
