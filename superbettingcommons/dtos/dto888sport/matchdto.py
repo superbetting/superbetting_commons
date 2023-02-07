@@ -1,4 +1,4 @@
-import dtos.basedto
+import superbettingcommons.dtos.basedto
 
 
 class ScrapedMatchDto(dtos.basedto.BaseDto):
