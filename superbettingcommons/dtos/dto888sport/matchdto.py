@@ -1,3 +1,5 @@
+import datetime
+
 from superbettingcommons.dtos.basedto import BaseDto
 
 
@@ -13,10 +15,16 @@ class MatchData(BaseDto):
         self.match_id = ""
         self.home_team = ""
         self.away_team = ""
+        self.started: datetime.datetime = datetime.datetime.now()
 
 
 class Snapshot(BaseDto):
     def __init__(self) -> None:
+        self.seconds = 0
+        self.minutes = 0
+        self.score_home = 0
+        self.score_away = 0
+        self.score_sum = 0
         self.statistics = Statistics()
         self.bet_list: list[BetData] = []
 
@@ -34,10 +42,6 @@ class BetType(BaseDto):
 
 class Statistics(BaseDto):
     def __init__(self):
-        self.minutes = 0
-        self.score_home = 0
-        self.score_away = 0
-        self.score_sum = 0
         self.attacks_home = 0
         self.attacks_away = 0
         self.attacks_sum = 0
